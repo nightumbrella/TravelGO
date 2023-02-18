@@ -24,7 +24,6 @@ const placesAPI = [
   { placeImg: place10, location: "Rome", distance: "5.1 hour drive" },
 ];
 
-
 const Explore = () => {
   return (
     <>
@@ -38,17 +37,17 @@ const Explore = () => {
 
           <div className="grid grid-explore">
             {placesAPI?.map((items, index) => (
-              <div key={index} className="box bg-slate-600 ">
-                <div className="border-2">
-                  <img
-                    src={items.placeImg}
-                    alt={items.location}
-                    className="w-auto h-full sm:w-16 sm:h-16 rounded-lg filter drop-shadow-lg object-cover"
-                  />
-                  <h1 className="text-lg sm:text-sm font-bold">
+              <div key={index} className="box bg-slate-600 relative ">
+                <img
+                  src={items.placeImg}
+                  alt={items.location}
+                  className="w-full h-full sm:w-16 sm:h-16 rounded-lg filter drop-shadow-lg object-cover duration-300 cursor-pointer"
+                />
+                <div className="absolute bottom-3 left-3 z-10">
+                  <h1 className="text-lg sm:text-sm font-bold text-white">
                     {items.location}
                   </h1>
-                  <p className="font-normal lg:text-sm text-base sm:text-xs">
+                  <p className="font-normal lg:text-sm text-base sm:text-xs text-white">
                     {items.distance}
                   </p>
                 </div>

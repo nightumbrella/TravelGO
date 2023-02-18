@@ -1,5 +1,5 @@
 import React from "react";
-import {Hero, Navbar, Footer, Memory, Explore, Advertise, Pricing} from "./Components"
+import {Hero, Navbar, Footer, Memory, Explore, Advertise, Banner} from "./Components"
 import dashboard from './images/dashboard.png'
 import { BrowserRouter } from "react-router-dom";
 
@@ -20,10 +20,10 @@ const App = () => {
       <Navbar />
       <Hero hero={hero}/>
       <Memory/>
-      <Footer />
       <Explore/>
       <Advertise/>
-      <Pricing/>
+      <Banner/>
+      <Footer />
       </BrowserRouter>
     </div>
   );
